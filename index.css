@@ -1,0 +1,53 @@
+/* --- 以下为针对教室大屏优化的追加样式 --- */
+
+/* 1. 将容器设为弹性布局并改变垂直顺序 */
+.App {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* 2. 头部标题排在最前 */
+.App-header {
+  order: 1 !important;
+}
+
+/* 3. 游戏核心区排在第二（中间） */
+.game-area {
+  order: 2 !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+/* 4. 反馈消息（如“拼对了”） */
+.feedback-message {
+  order: 3 !important;
+}
+
+/* 5. 重点：按钮操作区强制排到下方（order: 4） */
+.button-container {
+  order: 4 !important;
+  margin-top: 10px !important;
+  background: #f8f9fa !important;
+  padding: 15px !important;
+  border-radius: 12px !important;
+  box-shadow: 0 -4px 10px rgba(0,0,0,0.05) !important;
+  width: 100% !important;
+  max-width: 600px !important;
+  justify-content: center !important;
+}
+
+/* 6. 操作指南排在最后 */
+.instructions {
+  order: 5 !important;
+  font-size: 0.9rem !important;
+  color: #666 !important;
+}
+
+/* 7. 针对小学大屏的按钮尺寸优化：让按钮更大，更容易点到 */
+.game-button {
+  padding: 12px 20px !important;
+  font-size: 16px !important;
+  min-width: 100px !important;
+  margin: 5px !important;
+}
